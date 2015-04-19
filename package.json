@@ -1,0 +1,39 @@
+{
+  "name": "cyberattacks-map",
+  "version": "0.1.0",
+  "description": "An open-source, modular webapp for real-time cyberattacks visualization",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "feed": "node utils/sender"
+  },
+  "keywords": [
+    "map",
+    "visualization",
+    "security",
+    "web"
+  ],
+  "author": "Emilio Grande <erixcbr@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "body-parser": "^1.12.3",
+    "browserify-middleware": "^5.0.2",
+    "d3": "^3.5.5",
+    "express": "^4.12.3",
+    "handlebars": "^3.0.1",
+    "hbsfy": "^2.2.1",
+    "jquery": "^2.1.3",
+    "nib": "^1.1.0",
+    "socket.io": "^1.3.5",
+    "socket.io-client": "^1.3.5",
+    "stylus": "^0.50.0",
+    "topojson": "^1.6.19"
+  },
+  "devDependencies": {
+    "chance": "^0.7.3",
+    "moment": "^2.10.2",
+    "superagent": "^1.2.0"
+  }
+}

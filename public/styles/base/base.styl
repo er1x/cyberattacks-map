@@ -1,0 +1,65 @@
+html, body
+  height 100%
+
+main
+  position relative
+
+body
+  background  $body-background-color
+  font-size   $font-size
+  &::after
+    background url('../../img/background.png') repeat
+    bottom 0
+    content ""
+    left 0
+    opacity .5
+    position absolute
+    right 0
+    top 0
+    z-index -1
+
+for size in 1 2 3 4 5
+  h{size}
+    font-weight normal
+    margin 0
+
+.controls
+  background $controls-background-color
+  border-top 1px dotted $controls-border-color
+  box-sizing border-box
+  display flex
+  max-height 100%
+  min-height 33vh
+  overflow-y auto
+  position absolute
+  top 67vh
+  width 100%
+  .controls-item
+    border-right 1px dotted $controls-border-color
+    color $controls-item-font-color
+    &--title
+      border-bottom 1px solid $controls-item-title-border-color
+      color $controls-item-title-color
+      font-family $controls-item-title-font
+      font-size 1.2rem
+      padding .5rem
+      text-shadow 0 0 1px $controls-item-title-shadow-color
+    &--list
+      margin 0
+      padding 0
+      list-style none
+    &--table
+      font-family $controls-item-table-font
+      margin-top 5px
+      width 100%
+      tbody
+        margin-top 5px
+      td
+        animation appear 1s linear
+        text-align center
+
+@keyframes appear
+  from
+    color $controls-table-item-startcolor
+  to
+    color $controls-table-item-endcolor
