@@ -2,18 +2,20 @@
   <div class="controls-item--title">
     Top Countries
   </div>
-  <table class="controls-item--table">
-    <thead>
-      <th>Country</th>
-      <th>#</th>
-    </thead>
-    <tbody>
-      {{#each countries}}
-      <tr>
-        <td>{{countryName}}</td>
-        <td>{{attacks}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+  <div>
+    <table class="controls-item--table">
+      <thead>
+        <th>Country</th>
+        <th>#</th>
+      </thead>
+      <tbody>
+        {{#each countries}}
+        <tr>
+          <td>{{countryName}}</td>
+          <td>{{attacks}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </div>

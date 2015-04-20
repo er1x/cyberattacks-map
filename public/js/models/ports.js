@@ -1,6 +1,7 @@
 'use strict';
 
 var Backbone = require('backbone');
+var _        = require('underscore');
 Backbone.$   = require('jquery');
 
 var model = Backbone.Model.extend({
@@ -19,7 +20,7 @@ var model = Backbone.Model.extend({
 
   // TODO: refactor with countries view
   update: function(attack) {
-    var tmp = this.get('ports');
+    var tmp = _.clone(this.get('ports'));
     var portFound = false;
 
     tmp.forEach(function(el){
@@ -46,7 +47,6 @@ var model = Backbone.Model.extend({
     });
 
     this.set('ports', tmp.slice(0, 9)); // max 9 ports
-    this.trigger('change');
   }
 });
 

@@ -2,28 +2,30 @@
   <div class="controls-item--title">
     Attacks Log
   </div>
-  <table class="controls-item--table">
-    <thead>
-      <th>Timestamp</th>
-      <th>Country</th>
-      <th>City</th>
-      <th>ASN</th>
-      <th>Organization</th>
-      <th>IP</th>
-      <th>Port</th>
-    </thead>
-    <tbody>
-      {{#each logLines}}
-      <tr>
-        <td>{{timestamp}}</td>
-        <td>{{country}}</td>
-        <td>{{city}}</td>
-        <td>{{asn}}</td>
-        <td>{{organization}}</td>
-        <td>{{ip}}</td>
-        <td>{{port}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+  <div>
+    <table class="controls-item--table">
+      <thead>
+        <th style="width:18%;">Timestamp</th>
+        <th style="width:18%;">Country</th>
+        <th style="width:14%;">City</th>
+        <th style="width:10%;">ASN</th>
+        <th style="width:18%;">Organization</th>
+        <th style="width:15%;">IP</th>
+        <th style="width:7%;">Port</th>
+      </thead>
+      <tbody>
+        {{#each logLines}}
+        <tr>
+          <td>{{timestamp}}</td>
+          <td>{{country}}</td>
+          <td>{{city}}</td>
+          <td>{{asn}}</td>
+          <td>{{organization}}</td>
+          <td>{{ip}}</td>
+          <td>{{port}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </div>

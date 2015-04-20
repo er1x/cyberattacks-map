@@ -2,20 +2,22 @@
   <div class="controls-item--title">
     Top Ports
   </div>
-  <table class="controls-item--table">
-    <thead>
-      <th>Port</th>
-      <th>#</th>
-    </thead>
-    <tbody>
-      {{#each ports}}
-      {{#if this}}
-        <tr>
-          <td>{{port}}</td>
-          <td>{{attacks}}</td>
-        </tr>
-      {{/if}}
-      {{/each}}
-    </tbody>
-  </table>
+  <div>
+    <table class="controls-item--table">
+      <thead>
+        <th>Port</th>
+        <th>#</th>
+      </thead>
+      <tbody>
+        {{#each ports}}
+        {{#if this}}
+          <tr>
+            <td>{{port}}</td>
+            <td>{{attacks}}</td>
+          </tr>
+        {{/if}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 </div>

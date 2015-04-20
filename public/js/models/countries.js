@@ -1,6 +1,7 @@
 'use strict';
 
 var Backbone = require('backbone');
+var _        = require('underscore');
 Backbone.$   = require('jquery');
 
 var model = Backbone.Model.extend({
@@ -18,7 +19,7 @@ var model = Backbone.Model.extend({
   },
 
   update: function(attack) {
-    var tmp = this.get('countries');
+    var tmp = _.clone(this.get('countries'));
     var countryFound = false;
 
     tmp.forEach(function(c){
@@ -45,7 +46,6 @@ var model = Backbone.Model.extend({
     });
 
     this.set('countries', tmp.slice(0, 9)); // max 9 countries
-    this.trigger('change');
   }
 });
 

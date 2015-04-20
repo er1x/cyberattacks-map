@@ -1,6 +1,7 @@
 'use strict';
 
 var Backbone = require('backbone');
+var _        = require('underscore');
 Backbone.$   = require('jquery');
 
 var model = Backbone.Model.extend({
@@ -10,7 +11,7 @@ var model = Backbone.Model.extend({
   },
 
   update: function(attack) {
-    var tmp = this.get('logLines');
+    var tmp = _.clone(this.get('logLines'));
     var line = {};
     line.country      = attack.originCountryName;
     line.city         = attack.originCity;
@@ -22,7 +23,6 @@ var model = Backbone.Model.extend({
     tmp.unshift(line);
 
     this.set('logLines', tmp.slice(0,9));
-    this.trigger('change');
   }
 });
 
